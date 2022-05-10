@@ -1,0 +1,166 @@
+body {
+    -webkit-tap-highlight-color: transparent;
+    background: #efefef;
+    font-size: 62.5%;
+}
+
+.wrapper {
+    width: 45vw;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+
+.navigation {
+    height: 5%;
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label__item {
+    aspect-ratio: 1/1;
+    height: auto;
+    min-width: 15%;
+    cursor: pointer;
+    position: relative;
+    box-sizing: content-box;
+    border: 0.6vw solid transparent;
+    border-radius: 50%;
+}
+
+.control {
+    aspect-ratio: 1/1;
+    height: auto;
+    min-width: 15%;
+    border-radius: 50%;
+    background: rgb(101, 68, 107);
+    cursor: pointer;
+    transition: background 0.4s, border 0.4s;
+    border: 0.2vw solid #65446b;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label__item:hover > .control {
+    border: 0.2vw solid #d790e5;
+    background: #d790e5;
+}
+
+input {
+    display: none;
+}
+
+.slider {
+    width: 400%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide {
+    width: 25%;
+    transition: margin-left 0.6s ease;
+}
+
+
+.slides {
+    width: 100%;
+    display: flex;
+}
+
+.slide__texts {
+    width: 50%;
+    display: flex;
+}
+
+
+.slide__text {
+    text-align: right;
+    font-size: 0;
+    width: 0;
+    letter-spacing: -100rem;
+    transition: margin-left 0.6s ease, width 0.6s, color 0.6s;
+}
+
+#mem_1:checked ~ .slides > .visible {
+    margin-left: 0;
+}
+
+#mem_1:checked ~ .gr1 > .slide__texts > .t1 {
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: unset;
+}
+
+#mem_1:checked ~ .gr1 > .navigation > label > .c1 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+
+#mem_2:checked ~ .slides > .visible {
+    margin-left: -25%;
+}
+
+#mem_2:checked ~ .gr1 > .slide__texts > .t2 {
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: unset;
+}
+
+#mem_2:checked ~ .gr1 > .navigation > label > .c2 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+
+#mem_3:checked ~ .slides > .visible {
+    margin-left: -50%;
+}
+
+#mem_3:checked ~ .gr1 > .slide__texts > .t3 {
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: unset;
+}
+
+#mem_3:checked ~ .gr1 > .navigation > label > .c3 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+#mem_4:checked ~ .slides > .visible {
+    margin-left: -75%;
+}
+
+#mem_4:checked ~ .gr1 > .slide__texts > .t4 {
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: unset;
+}
+
+#mem_4:checked ~ .gr1 > .navigation > label > .c4 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+img {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
+.gr1 {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+}
+

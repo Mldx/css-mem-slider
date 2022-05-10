@@ -48,7 +48,9 @@ body {
 }
 
 input {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 0;
 }
 
 .slider {

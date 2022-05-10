@@ -8,6 +8,8 @@ body {
     width: 45vw;
     margin: 20px auto 0;
     overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: #b6a6c4 0 0 1.5rem 0.1rem;
 }
 
 .navigation {
@@ -32,7 +34,7 @@ body {
     height: auto;
     min-width: 15%;
     border-radius: 50%;
-    background: rgb(101, 68, 107);
+    background: #65446b;
     cursor: pointer;
     transition: background 0.4s, border 0.4s;
     border: 0.2vw solid #65446b;

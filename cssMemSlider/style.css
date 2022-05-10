@@ -27,6 +27,7 @@ body {
     position: relative;
     box-sizing: content-box;
     border: 0.6vw solid transparent;
+    transition:  transform 0.15s;
 }
 
 .control {
@@ -36,7 +37,7 @@ body {
     border-radius: 50%;
     background: #65446b;
     cursor: pointer;
-    transition: background 0.4s, border 0.4s;
+    transition: background 0.3s, border 0.3s;
     border: 0.2vw solid #65446b;
     position: relative;
     display: flex;
@@ -102,6 +103,9 @@ input {
     background: transparent;
     border: 0.2vw solid #65446b;
 }
+#mem_1:not(:checked) ~ .gr1 > .navigation > .l1:active{
+    transform: scale(130%);
+}
 
 
 #mem_2:checked ~ .slides > .visible {
@@ -119,7 +123,9 @@ input {
     background: transparent;
     border: 0.2vw solid #65446b;
 }
-
+#mem_2:not(:checked) ~ .gr1 > .navigation > .l2:active{
+    transform: scale(130%);
+}
 
 #mem_3:checked ~ .slides > .visible {
     margin-left: -50%;
@@ -136,6 +142,9 @@ input {
     background: transparent;
     border: 0.2vw solid #65446b;
 }
+#mem_3:not(:checked) ~ .gr1 > .navigation > .l3:active{
+    transform: scale(130%);
+}
 
 #mem_4:checked ~ .slides > .visible {
     margin-left: -75%;
@@ -151,6 +160,9 @@ input {
 #mem_4:checked ~ .gr1 > .navigation > label > .c4 {
     background: transparent;
     border: 0.2vw solid #65446b;
+}
+#mem_4:not(:checked) ~ .gr1 > .navigation > .l4:active{
+    transform: scale(130%);
 }
 
 img {

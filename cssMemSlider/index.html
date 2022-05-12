@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./normalize/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Css mem slider</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="slider">
+
+        <input type="radio" name="radio" id="mem_1" checked>
+        <input type="radio" name="radio" id="mem_2">
+        <input type="radio" name="radio" id="mem_3">
+        <input type="radio" name="radio" id="mem_4">
+
+        <div class="slides">
+            <div class="slide visible">
+                <img src="./assets/images/mem_1.jpg" draggable="false" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/images/mem_2.jpg" draggable="false" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/images/mem_3.jpg" draggable="false" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/images/mem_4.jpg" draggable="false" alt="">
+            </div>
+        </div>
+        <div class="gr1">
+            <div class="slide__texts">
+                <div class="slide__text t1 vis">программирование...</div>
+                <div class="slide__text t2">почему&nbsp;болит&nbsp;спина?</div>
+                <div class="slide__text t3">my&nbsp;app</div>
+                <div class="slide__text t4">функционал&nbsp;продукта...</div>
+            </div>
+            <div class="navigation">
+                <label for="mem_1" class="label__item l1">
+                    <span class="control c1"></span>
+                </label>
+                <label for="mem_2" class="label__item l2">
+                    <span class="control c2"></span>
+                </label>
+                <label for="mem_3" class="label__item l3">
+                    <span class="control c3"></span>
+                </label>
+                <label for="mem_4" class="label__item l4">
+                    <span class="control c4"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

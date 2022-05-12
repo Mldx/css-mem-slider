@@ -1,0 +1,234 @@
+body {
+    -webkit-tap-highlight-color: transparent;
+    background: #efefef;
+    font-size: 62.5%;
+}
+
+.wrapper {
+    width: 45vw;
+    margin: 20px auto 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: #b6a6c4 0 0 1.5rem 0.1rem;
+}
+
+.navigation {
+    height: 5%;
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label__item {
+    aspect-ratio: 1/1;
+    height: auto;
+    min-width: 15%;
+    cursor: pointer;
+    position: relative;
+    box-sizing: content-box;
+    border: 0.6vw solid transparent;
+    transition: transform 0.15s;
+}
+
+.control {
+    aspect-ratio: 1/1;
+    height: auto;
+    min-width: 15%;
+    border-radius: 50%;
+    background: #65446b;
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s;
+    border: 0.2vw solid #65446b;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label__item:hover > .control {
+    border: 0.2vw solid #d790e5;
+    background: #d790e5;
+}
+
+input {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.slider {
+    width: 400%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide {
+    width: 25%;
+    transition: margin-left 0.6s ease;
+}
+
+
+.slides {
+    width: 100%;
+    display: flex;
+}
+
+.slide__texts {
+    width: 70%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+.slide__text {
+    font-size: 1.6rem;
+    min-width: 100%;
+    max-width: 100%;
+    transition: margin-left 0.6s ease, width 0.6s, color 0.6s, color 0.42s cubic-bezier(0,-1.39, 1, 2.37);
+    color: transparent;
+}
+
+#mem_1:checked ~ .slides > .visible {
+    margin-left: 0;
+}
+
+#mem_1:checked ~ .gr1 > .slide__texts > .vis {
+    margin-left: 0;
+    color: black;
+}
+
+#mem_1:checked ~ .gr1 > .navigation > label > .c1 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+#mem_1:not(:checked) ~ .gr1 > .navigation > .l1:active {
+    transform: scale(130%);
+}
+
+
+#mem_2:checked ~ .slides > .visible {
+    margin-left: -25%;
+}
+
+#mem_2:checked ~ .gr1 > .slide__texts > .vis {
+    margin-left: -100%;
+}
+
+#mem_2:checked ~ .gr1 > .slide__texts > .t2 {
+   color: black;
+}
+
+#mem_2:checked ~ .gr1 > .navigation > label > .c2 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+#mem_2:not(:checked) ~ .gr1 > .navigation > .l2:active {
+    transform: scale(130%);
+}
+
+#mem_3:checked ~ .slides > .visible {
+    margin-left: -50%;
+}
+
+#mem_3:checked ~ .gr1 > .slide__texts > .vis {
+    margin-left: -200%;
+}
+#mem_3:checked ~ .gr1 > .slide__texts > .t3 {
+    color: black;
+}
+#mem_3:checked ~ .gr1 > .navigation > label > .c3 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+#mem_3:not(:checked) ~ .gr1 > .navigation > .l3:active {
+    transform: scale(130%);
+}
+
+#mem_4:checked ~ .slides > .visible {
+    margin-left: -75%;
+}
+
+#mem_4:checked ~ .gr1 > .slide__texts > .vis {
+    margin-left: -300%;
+}
+#mem_4:checked ~ .gr1 > .slide__texts > .t4 {
+    color: black;
+}
+
+#mem_4:checked ~ .gr1 > .navigation > label > .c4 {
+    background: transparent;
+    border: 0.2vw solid #65446b;
+}
+
+#mem_4:not(:checked) ~ .gr1 > .navigation > .l4:active {
+    transform: scale(130%);
+}
+
+img {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
+.gr1 {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .wrapper {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .label__item {
+        min-width: 20%;
+    }
+
+    #mem_1:checked ~ .gr1 > .slide__texts > .t1 {
+        font-size: 1.4rem;
+    }
+
+    #mem_2:checked ~ .gr1 > .slide__texts > .t2 {
+        font-size: 1.4rem;
+    }
+
+    #mem_3:checked ~ .gr1 > .slide__texts > .t3 {
+        font-size: 1.4rem;
+    }
+
+    #mem_4:checked ~ .gr1 > .slide__texts > .t4 {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .gr1 {
+        width: 25%;
+        flex-wrap: wrap;
+    }
+
+    .slide__texts {
+        width: 100%;
+        order: 1;
+    }
+
+    .navigation {
+        width: 25%;
+        order: 0;
+        margin: 2% auto;
+        justify-content: center;
+
+    }
+}
+
